@@ -35,4 +35,3 @@ return thunkAPI.rejectWithValue(error.message)
 }
 })
  
-// export default {fetchContacts, addContact, deleteContact}
