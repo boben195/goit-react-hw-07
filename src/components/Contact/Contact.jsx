@@ -4,7 +4,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import css from "../Contact/Contact.module.css";
 
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contactsSlice";
+import { deleteContact } from "../../redux/contactsOps";
 
 const Contact = ({ contact }) => {
   const dispatch = useDispatch();
@@ -15,7 +15,7 @@ const Contact = ({ contact }) => {
     <div>
       <p>
         <ImAccessibility className={css.icons} />
-        {contact.username}
+        {contact.name}
       </p>
       <p>
         <FaPhoneAlt className={css.icons} />

@@ -3,6 +3,10 @@ import "./App.css";
 import ContactForm from "./ContactForm/ContactForm";
 import SearchBox from "./SearchBox/SearchBox";
 import ContactList from "./ContactList/ContactList";
+import { useDispatch } from "react-redux";
+
+import { useEffect } from "react";
+import { fetchContacts } from "../redux/contactsOps";
 
 function App() {
   // const [contacts, setContacts] = useState(() => {
@@ -30,6 +34,12 @@ function App() {
   // const currentData = contacts.filter((cont) =>
   //   cont.username.toLowerCase().includes(search.toLowerCase())
   // );
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
   return (
     <>
